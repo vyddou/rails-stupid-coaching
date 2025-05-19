@@ -3,6 +3,7 @@ require "application_system_test_case"
 class QuestionsTest < ApplicationSystemTestCase
   test "visiting /ask renders the form" do
     visit ask_url
+    take_screenshot
     assert_selector "h1", text: "Ask your coach anything"
   end
 
@@ -27,3 +28,5 @@ class QuestionsTest < ApplicationSystemTestCase
     assert_text "Great!"
   end
 end
+
+
